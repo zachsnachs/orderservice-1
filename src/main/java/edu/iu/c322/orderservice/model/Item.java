@@ -4,7 +4,15 @@ public class Item {
    String name;
    int quantity;
    int price;
+   int id;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

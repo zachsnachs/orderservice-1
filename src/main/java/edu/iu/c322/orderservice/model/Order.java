@@ -7,7 +7,28 @@ import jakarta.validation.constraints.NotEmpty;
 import java.util.ArrayList;
 
 public class Order {
-    private int customerId, total;
+    private int customerId;
+    private int total;
+
+    List<Return> returns = new ArrayList<>();
+
+    public List<Return> getReturns() {
+        return returns;
+    }
+
+    public void setReturns(List<Return> returns) {
+        this.returns = returns;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    private int id;
     ArrayList<Item> items = new ArrayList<Item>();
 
 
