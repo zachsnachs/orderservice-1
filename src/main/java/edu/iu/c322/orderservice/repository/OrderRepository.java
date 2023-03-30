@@ -53,7 +53,7 @@ public class OrderRepository {
     }
 
     public void delete(int id) {
-        Order c = getById(id);
+        Order c = getOrderById(id);
         if(c != null){
             orders.remove(c);
         } else {

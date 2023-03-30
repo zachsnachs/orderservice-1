@@ -31,6 +31,7 @@ public class OrderController {
     // Get https:localhost:8080/customers
     @GetMapping
     public List<Order> findAll() {
+       // System.out.println("in findAll");
         return repository.findAll();
     }
 
@@ -41,7 +42,7 @@ public class OrderController {
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @PutMapping("/orders/return")
+    @PutMapping("/return")
     public void update(@Valid @RequestBody Return returnRequest) {
         repository.update(returnRequest);
     }
@@ -52,3 +53,5 @@ public class OrderController {
         repository.delete(customerId);
     }
 }
+
+

@@ -1,6 +1,7 @@
 package edu.iu.c322.orderservice.model;
 import java.util.List;
 
+
 import java.util.Objects;
 
 import jakarta.validation.constraints.NotEmpty;
@@ -9,9 +10,27 @@ import java.util.ArrayList;
 public class Order {
     private int customerId;
     private int total;
+    Payment payment;
+
+    public Payment getPayment() {
+        return payment;
+    }
+
+    public void setPayment(Payment payment) {
+        this.payment = payment;
+    }
+
+    public Address getShippingAddress() {
+        return shippingAddress;
+    }
+
+    public void setShippingAddress(Address shippingAddress) {
+        this.shippingAddress = shippingAddress;
+    }
+
+    Address shippingAddress;
 
     List<Return> returns = new ArrayList<>();
-
     public List<Return> getReturns() {
         return returns;
     }
@@ -29,14 +48,14 @@ public class Order {
     }
 
     private int id;
-    ArrayList<Item> items = new ArrayList<Item>();
+    List<Item> items = new ArrayList<Item>();
 
 
-    public ArrayList<Item> getItems() {
+    public List<Item> getItems() {
         return items;
     }
 
-    public void setItems(ArrayList<Item> items) {
+    public void setItems(List<Item> items) {
         this.items = items;
     }
 
@@ -51,6 +70,8 @@ public class Order {
     public int getCustomerId() {
         return customerId;
     }
+
+
 
     public void setCustomerId(int customerId) {
         this.customerId = customerId;
