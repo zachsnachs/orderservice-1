@@ -1,8 +1,13 @@
 package edu.iu.c322.orderservice.model;
 
+import jakarta.persistence.Entity;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
 public class Address {
     private String State, City;
     private int postalCode;
+
+    @Entity
 
     public Address(String state, String city, int postalCode) {
         State = state;
